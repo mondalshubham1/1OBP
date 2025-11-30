@@ -1,4 +1,4 @@
-import model.Song;
+package model;
 
 public class MusicPlayer {
     private Song currentSong;

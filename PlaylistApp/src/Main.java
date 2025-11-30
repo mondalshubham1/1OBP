@@ -1,3 +1,4 @@
+import model.MusicPlayer;
 import model.Playlist;
 import model.Song;
 import service.SearchService;
@@ -31,7 +32,7 @@ public class Main {
 
            1. Song : Represents a single music track
            2. Playlist : Manages a collection of Song
-           3. MusicPlayer : Core functionality for Playback and Media Controls
+           3. model.MusicPlayer : Core functionality for Playback and Media Controls
            4. SearchService : Enables searching of songs by metadata
            5. StorageService : Handles the retrieval of the song from Storage
 
