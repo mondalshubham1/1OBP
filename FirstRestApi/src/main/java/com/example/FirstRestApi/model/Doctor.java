@@ -1,21 +1,29 @@
 package com.example.FirstRestApi.model;
 
+import org.apache.juli.logging.Log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class Doctor extends Person{
-    private int doctorId;
+    private Integer doctorId;
     private String specialization;
     private String degree;
-    private int experience;
+    private Integer experience;
 
 
-    public Doctor(String name, String address, String phoneNumber, int age, int doctorId, String specialization, String degree, int experience) {
+    public Doctor() {
+        super();
+    }
+    public Doctor(String name, String address, String phoneNumber, Integer age, Integer doctorId, String specialization, String degree, Integer experience) {
         super(name, address, phoneNumber, age);
+        System.out.println("Parametrized constructor called");
         this.doctorId = doctorId;
         this.specialization = specialization;
         this.degree = degree;
         this.experience = experience;
     }
 
-    public int getDoctorId() {
+    public Integer getDoctorId() {
         return doctorId;
     }
 
@@ -39,11 +47,21 @@ public class Doctor extends Person{
         this.degree = degree;
     }
 
-    public int getExperience() {
+    public Integer getExperience() {
         return experience;
     }
 
-    public void setExperience(int experience) {
+    public void setExperience(Integer experience) {
         this.experience = experience;
+    }
+
+    @Override
+    public String toString() {
+        return "Doctor{" +
+                "doctorId=" + doctorId +
+                ", specialization='" + specialization + '\'' +
+                ", degree='" + degree + '\'' +
+                ", experience=" + experience +
+                '}' + super.toString();
     }
 }

@@ -6,7 +6,7 @@ public class Nurse extends Person{
 
 
     public Nurse(String name, String address, String phoneNumber, int age, int nurseId, String qualification) {
-        super(name, address, phoneNumber, age);
+        //super(name, address, phoneNumber, age);
         this.nurseId = nurseId;
         this.qualification = qualification;
     }
