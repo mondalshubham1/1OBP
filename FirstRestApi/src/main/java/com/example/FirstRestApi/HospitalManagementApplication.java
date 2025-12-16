@@ -3,6 +3,7 @@ package com.example.FirstRestApi;
 import com.example.FirstRestApi.model.Doctor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Component;
 
 @SpringBootApplication
 public class HospitalManagementApplication {
