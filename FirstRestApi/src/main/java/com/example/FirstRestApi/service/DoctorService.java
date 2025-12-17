@@ -11,12 +11,13 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 
-@Service
-@Scope("prototype")
 public class DoctorService {
-
-    @Autowired
     private DoctorRepository doctorRepository;
+
+    public DoctorService(DoctorRepository doctorRepository) {
+        System.out.println("DoctorService parametrized constructor is called");
+        this.doctorRepository = doctorRepository;
+    }
 
     public String addDoctor(Doctor doctor) {
         return doctorRepository.save(doctor);

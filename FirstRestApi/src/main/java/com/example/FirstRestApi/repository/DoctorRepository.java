@@ -6,10 +6,13 @@ import org.springframework.stereotype.Repository;
 import java.util.HashMap;
 import java.util.List;
 
-@Repository
 public class DoctorRepository {
 
     HashMap<Integer, Doctor> doctorDb = new HashMap<>();
+
+    public DoctorRepository() {
+        System.out.println("DoctorRepository parametrized constructor is called");
+    }
 
     public String save(Doctor doctor) {
         doctorDb.put(doctor.getDoctorId(), doctor);
